@@ -1,5 +1,6 @@
 // credits for the timer functionality https://www.youtube.com/watch?v=ZVOGPvo08zM
-import React, { useEffect, useRef, useState } from 'react';
+// import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -25,7 +26,8 @@ const App = () => {
   const [timerMinutes, setTimerMinutes] = useState('00');
   const [timerSeconds, setTimerSeconds] = useState('00');
 
-  let interval = useRef();
+  let interval
+  //  = useRef();
 
   const startTimer = () => {
     const countdownDate = new Date('May 20, 2021 19:00:00').getTime();
