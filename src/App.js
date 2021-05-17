@@ -42,7 +42,7 @@ const App = () => {
 
       if(distance < 0) { 
         //stop out timer
-        clearInterval(interval.current);
+        clearInterval(interval);
       } else {
         //update timer
         setTimerDays(days);
@@ -57,7 +57,7 @@ const App = () => {
   useEffect(()=> {
     startTimer();
     return() =>{
-      clearInterval(interval.current)
+      clearInterval(interval)
     }
   })
 
